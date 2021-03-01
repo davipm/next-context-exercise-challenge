@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/pages/Home.module.scss";
+import styles from "../styles/pages/home.module.scss";
 
 import Profile from "../components/profile";
 import ChallengesProvider from "../contexts/challenges";
