@@ -1,6 +1,6 @@
-import { useChallenges } from "../../hooks";
+import { useChallenges } from "@/hooks/index";
 
-import styles from "../../styles/components/experience-bar.module.scss";
+import styles from "@/styles/components/experience-bar.module.scss";
 
 export default function ExperienceBar() {
   const { currentExperience, experienceToNextLevel } = useChallenges();
