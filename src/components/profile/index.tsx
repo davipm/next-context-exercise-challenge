@@ -1,6 +1,5 @@
-import { useChallenges } from "../../hooks";
-
-import styles from "../../styles/components/profile.module.scss";
+import { useChallenges } from "@/hooks/index";
+import styles from "@/styles/components/profile.module.scss";
 
 export default function Profile() {
   const { level } = useChallenges();

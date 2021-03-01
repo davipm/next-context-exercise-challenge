@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import Profile from "../components/profile";
-import ChallengesProvider from "../contexts/challenges";
-import ExperienceBar from "../components/experience-bar";
+import Profile from "@/components/profile";
+import ChallengesProvider from "@/contexts/challenges";
+import ExperienceBar from "@/components/experience-bar";
 
-import styles from "../styles/pages/home.module.scss";
+import styles from "@/styles/pages/home.module.scss";
 import { GetServerSideProps } from "next";
 
 interface HomeProps {
