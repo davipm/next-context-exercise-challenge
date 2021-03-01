@@ -1,5 +1,5 @@
 import { useChallenges } from "../../hooks";
-import styles from "../../styles/components/levelUpModal.module.scss";
+import styles from "../../styles/components/level-up-modal.module.scss";
 
 export default function LevelUpModal() {
   const { level, closeLevelUpModal } = useChallenges();

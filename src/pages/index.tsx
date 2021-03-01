@@ -1,8 +1,11 @@
 import Head from "next/head";
-import styles from "../styles/pages/home.module.scss";
 
 import Profile from "../components/profile";
 import ChallengesProvider from "../contexts/challenges";
+import ExperienceBar from "../components/experience-bar";
+
+import styles from "../styles/pages/home.module.scss";
+import { GetServerSideProps } from "next";
 
 interface HomeProps {
   level: number;
@@ -27,7 +30,7 @@ export default function Home({
             <title>Exercise App</title>
           </Head>
 
-          <div />
+          <ExperienceBar />
 
           <section>
             <div>
@@ -39,3 +42,15 @@ export default function Home({
     </ChallengesProvider>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const { level, currentExperience, challengesCompleted } = req.cookies;
+
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted),
+    },
+  };
+};
