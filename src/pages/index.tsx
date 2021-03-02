@@ -1,11 +1,12 @@
 import Head from "next/head";
+import { GetServerSideProps } from "next";
 
 import Profile from "@/components/profile";
 import ChallengesProvider from "@/contexts/challenges";
 import ExperienceBar from "@/components/experience-bar";
+import CompletedChallenges from "@/components/completed-challenges";
 
 import styles from "@/styles/pages/home.module.scss";
-import { GetServerSideProps } from "next";
 
 interface HomeProps {
   level: number;
@@ -35,6 +36,7 @@ export default function Home({
           <section>
             <div>
               <Profile />
+              <CompletedChallenges />
             </div>
           </section>
         </main>
