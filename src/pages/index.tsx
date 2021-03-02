@@ -3,8 +3,10 @@ import { GetServerSideProps } from "next";
 
 import Profile from "@/components/profile";
 import ChallengesProvider from "@/contexts/challenges";
+import CountdownProvider from "@/contexts/countdown";
 import ExperienceBar from "@/components/experience-bar";
 import CompletedChallenges from "@/components/completed-challenges";
+import Countdown from "@/components/countdown";
 
 import styles from "@/styles/pages/home.module.scss";
 
@@ -25,7 +27,7 @@ export default function Home({
       challengesCompleted={challengesCompleted}
       currentExperience={currentExperience}
     >
-      <div>
+      <CountdownProvider>
         <main className={styles.container}>
           <Head>
             <title>Exercise App</title>
@@ -37,10 +39,11 @@ export default function Home({
             <div>
               <Profile />
               <CompletedChallenges />
+              <Countdown />
             </div>
           </section>
         </main>
-      </div>
+      </CountdownProvider>
     </ChallengesProvider>
   );
 }
