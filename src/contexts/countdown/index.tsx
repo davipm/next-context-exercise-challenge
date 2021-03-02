@@ -30,7 +30,7 @@ export default function CountdownProvider({
   useEffect(() => {
     window.onbeforeunload = () => {
       if (isActive) {
-        return "Você perderá o progresso do countdown até aqui, tem certeza?";
+        return "You will lose the countdown progress so far, are you sure?";
       }
     };
   }, [isActive]);
