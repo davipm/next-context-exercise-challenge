@@ -7,6 +7,7 @@ import CountdownProvider from "@/contexts/countdown";
 import ExperienceBar from "@/components/experience-bar";
 import CompletedChallenges from "@/components/completed-challenges";
 import Countdown from "@/components/countdown";
+import ChallengeBox from "@/components/challenge-box";
 
 import styles from "@/styles/pages/home.module.scss";
 
@@ -41,6 +42,8 @@ export default function Home({
               <CompletedChallenges />
               <Countdown />
             </div>
+
+            <ChallengeBox />
           </section>
         </main>
       </CountdownProvider>

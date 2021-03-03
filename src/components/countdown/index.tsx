@@ -2,7 +2,7 @@ import cx from "classnames";
 
 import { useCountdown } from "@/hooks/index";
 
-import styles from "../../styles/components/countdown.module.scss";
+import styles from "@/styles/components/countdown.module.scss";
 
 export default function Countdown() {
   const {
